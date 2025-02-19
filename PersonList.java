@@ -1,17 +1,15 @@
-package Ex3;
+package Ex4;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PersonList {
-
     private ArrayList<Person> people;
 
     public PersonList() {
         people = new ArrayList<>();
     }
 
-    // Thêm người (Person)
     public void addPerson() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter type of person (student/teacher): ");
@@ -26,23 +24,21 @@ public class PersonList {
             teacher.addPerson();
             people.add(teacher);
         } else {
-            System.out.println("Invalid type of person!");
+            System.out.println("Invalid type!");
         }
     }
 
-    // Hiển thị tất cả
     public void displayAll() {
         if (people.isEmpty()) {
             System.out.println("No people in the list.");
         } else {
             for (Person person : people) {
                 person.displayInfo();
-                System.out.println("-------------------");
+                System.out.println("--------------------");
             }
         }
     }
 
-    // Xóa theo ID
     public boolean deletePersonById(String id) {
         for (Person person : people) {
             if (person.id.equals(id)) {
@@ -53,7 +49,6 @@ public class PersonList {
         return false;
     }
 
-    // Sửa theo ID
     public void editPersonById(String id) {
         for (Person person : people) {
             if (person.id.equals(id)) {

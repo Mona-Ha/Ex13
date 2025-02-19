@@ -1,5 +1,5 @@
 
-package Ex3;
+package Ex4;
 import java.util.Scanner;
 public class Student extends Person{
 
@@ -35,5 +35,4 @@ public class Student extends Person{
         return true;
     }
 }
-
 

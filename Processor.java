@@ -1,6 +1,7 @@
+package Ex4;
 
-package Ex3;
 import java.util.Scanner;
+
 public class Processor {
 
     public static void main(String[] args) {
@@ -16,9 +17,8 @@ public class Processor {
             System.out.println("4. Edit Person By ID");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
-
             choice = sc.nextInt();
-            sc.nextLine(); // Đọc dòng trống sau khi nhập số
+            sc.nextLine(); // Đọc dòng trống
 
             switch (choice) {
                 case 1:
@@ -32,7 +32,7 @@ public class Processor {
                     System.out.print("Enter ID to delete: ");
                     String idToDelete = sc.nextLine();
                     if (personList.deletePersonById(idToDelete)) {
-                        System.out.println("Person deleted successfully!");
+                        System.out.println("Deleted successfully!");
                     } else {
                         System.out.println("No person found with ID: " + idToDelete);
                     }
@@ -46,10 +46,8 @@ public class Processor {
                     System.out.println("Exiting program...");
                     break;
                 default:
-                    System.out.println("Invalid choice! Please try again.");
+                    System.out.println("Invalid choice! Try again.");
             }
         } while (choice != 0);
     }
 }
-
-

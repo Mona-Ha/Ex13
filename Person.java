@@ -1,12 +1,11 @@
-package Ex3;
 
+package Ex4;
 import java.util.Scanner;
-
 public class Person {
 
     protected String id;
     protected String homeTown;
-    protected String dateOfBirth; // Sử dụng String thay vì Date để đơn giản
+    protected String dateOfBirth; // Để đơn giản, sử dụng String thay vì kiểu Date
 
     public Person(String id, String homeTown, String dateOfBirth) {
         this.id = id;
@@ -14,17 +13,14 @@ public class Person {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public Person() {
-    }
+    public Person() {}
 
-    // Hiển thị thông tin
     public void displayInfo() {
         System.out.println("ID: " + id);
         System.out.println("Home Town: " + homeTown);
         System.out.println("Date of Birth: " + dateOfBirth);
     }
 
-    // Nhập thông tin
     public void addPerson() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter ID: ");
@@ -35,7 +31,6 @@ public class Person {
         dateOfBirth = sc.nextLine();
     }
 
-    // Sửa thông tin
     public boolean editPerson() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Edit Home Town: ");
@@ -45,3 +40,4 @@ public class Person {
         return true;
     }
 }
+

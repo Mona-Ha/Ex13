@@ -1,11 +1,7 @@
 
-package Ex3;
+package Ex4;
 import java.util.Scanner;
-public class Teacher extends Person {
-   
-
-
-
+public class Teacher extends Person{
 
     private String department;
 
